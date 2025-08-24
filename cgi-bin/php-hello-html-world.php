@@ -1,18 +1,19 @@
-#!/usr/bin/php-cgi
 <?php
-  header("Cache-Control: no-cache");
-  header("Content-type: text/html\n");
+header("Cache-Control: no-cache");
+header("Content-Type: text/html");
 
-  date_default_timezone_set("America/Los_Angeles"); 
-
-  print "<h1>Hello, PHP! Yanhua and Nicole are here</h1>\n";
-  print "<p>This page was generated with PHP!</p>\n";
-
-  $date = date("l, F j, Y h:i:s A");
-  print "<p>Current Time: $date</p>\n";
-
-  $address = $_SERVER['REMOTE_ADDR'];
-  print "<p>Your IP Address: $address</p>\n";
+$ip = $_SERVER['REMOTE_ADDR'];
+$date = date('Y-m-d H:i:s');
 ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, PHP!</title>
+</head>
+<body>
+    <h1>Hello, PHP</h1>
+    <p>Current Time: <?= $date ?></p>
+    <p>Your IP Address: <?= $ip ?></p>
+</body>
+</html>
 
