@@ -1,16 +1,11 @@
-#!/usr/bin/php-cgi
 <?php
-  header("Cache-Control: no-cache");
-  header("Content-type: application/json\n");
+header("Cache-Control: no-cache");
+header("Content-Type: application/json");
 
-  date_default_timezone_set("America/Los_Angeles");
-  $date = date("c");
-  $ip = $_SERVER['REMOTE_ADDR'];
-
-  $data = array(
-    "title" => "Hello, PHP (JSON)!Team: Nicole & Yanhua",
-    "time" => $date,
-    "IP" => $ip
-  );
-  echo json_encode($data);
-?>
+echo json_encode([
+    'title' => 'Hello, PHP! Team: nicole & yanhua', 
+    'heading' => 'Hello, PHP!', 
+    'message' => 'Hello PHP',
+    'time' => date('Y-m-d H:i:s'),
+    'IP' => $_SERVER['REMOTE_ADDR']
+]);
