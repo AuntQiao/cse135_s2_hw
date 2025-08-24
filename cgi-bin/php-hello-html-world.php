@@ -5,7 +5,7 @@
 
   date_default_timezone_set("America/Los_Angeles"); 
 
-  print "<h1>Hello, PHP!</h1>\n";
+  print "<h1>Hello, PHP! Yanhua and Nicole are here</h1>\n";
   print "<p>This page was generated with PHP!</p>\n";
 
   $date = date("l, F j, Y h:i:s A");
